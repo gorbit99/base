@@ -38,5 +38,18 @@ public class TrainSystem {
 	public TrainUser getUser() {
 		return user;
 	}
-
+	
+	public TrainSystem(){
+		new Thread(() -> {
+			controller.followSpeed();
+			try{
+				Thread.sleep(500);}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+		
+		});
+		
+		
+	}
 }
